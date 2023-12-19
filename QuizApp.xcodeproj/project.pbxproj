@@ -63,6 +63,7 @@
 		C41E11552B317FBB0005F3E2 = {
 			isa = PBXGroup;
 			children = (
+				C41E11912B3180DC0005F3E2 /* QuizApp.xctestplan */,
 				C41E11602B317FBB0005F3E2 /* QuizApp */,
 				C41E11772B317FBC0005F3E2 /* QuizAppTests */,
 				C41E115F2B317FBB0005F3E2 /* Products */,
@@ -96,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				C41E11782B317FBC0005F3E2 /* QuizAppTests.swift */,
-				C41E11912B3180DC0005F3E2 /* QuizApp.xctestplan */,
 				C41E11922B3181B90005F3E2 /* QuestionViewControllerTest.swift */,
 			);
 			path = QuizAppTests;

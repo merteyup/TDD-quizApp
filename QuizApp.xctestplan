@@ -23,15 +23,6 @@
         "identifier" : "C41E11732B317FBC0005F3E2",
         "name" : "QuizAppTests"
       }
-    },
-    {
-      "enabled" : false,
-      "parallelizable" : true,
-      "target" : {
-        "containerPath" : "container:QuizApp.xcodeproj",
-        "identifier" : "C41E117D2B317FBC0005F3E2",
-        "name" : "QuizAppUITests"
-      }
     }
   ],
   "version" : 1
