@@ -8,12 +8,6 @@
 import Foundation
 import UIKit
 
-struct PresentableAnswer {
-    let question: String
-    let answer: String
-    let wrongAnswer: String?
-}
-
 class CorrectAnswerCell: UITableViewCell { 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var correctAnswerLabel: UILabel!
