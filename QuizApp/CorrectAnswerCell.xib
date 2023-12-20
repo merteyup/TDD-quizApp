@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,21 +16,36 @@
                 <rect key="frame" x="0.0" y="0.0" width="393" height="81"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhv-vR-g74">
-                        <rect key="frame" x="20" y="15" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhv-vR-g74">
+                        <rect key="frame" x="20" y="15" width="353" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="KpK-Ey-aHW"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="353" id="ebq-Rc-7g9"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHi-tp-6u0">
-                        <rect key="frame" x="20" y="44" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHi-tp-6u0">
+                        <rect key="frame" x="20" y="44" width="353" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="wuY-N1-u0G"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="353" id="zk3-UO-xsf"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" systemColor="systemGreenColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="Vhv-vR-g74" firstAttribute="leading" secondItem="ewe-Ay-zhb" secondAttribute="leading" constant="20" symbolic="YES" id="7NK-Um-CX5"/>
+                    <constraint firstItem="CHi-tp-6u0" firstAttribute="top" secondItem="Vhv-vR-g74" secondAttribute="bottom" constant="8" symbolic="YES" id="UH0-kU-MXV"/>
+                    <constraint firstAttribute="trailing" secondItem="CHi-tp-6u0" secondAttribute="trailing" constant="20" symbolic="YES" id="Y79-fQ-mJa"/>
+                    <constraint firstItem="Vhv-vR-g74" firstAttribute="top" secondItem="ewe-Ay-zhb" secondAttribute="top" constant="15" id="ayH-Fm-vyH"/>
+                    <constraint firstItem="CHi-tp-6u0" firstAttribute="leading" secondItem="ewe-Ay-zhb" secondAttribute="leading" constant="20" symbolic="YES" id="i7r-FU-FKm"/>
+                    <constraint firstAttribute="bottom" secondItem="CHi-tp-6u0" secondAttribute="bottom" constant="16" id="yS8-41-uE1"/>
+                    <constraint firstAttribute="trailing" secondItem="Vhv-vR-g74" secondAttribute="trailing" constant="20" symbolic="YES" id="zPN-SE-w6G"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="correctAnswerLabel" destination="CHi-tp-6u0" id="7VC-Tm-fQ8"/>
@@ -38,4 +54,9 @@
             <point key="canvasLocation" x="693.89312977099235" y="182.74647887323945"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
