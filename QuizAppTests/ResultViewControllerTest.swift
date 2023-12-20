@@ -20,7 +20,7 @@ class ResultViewControllerTest: XCTestCase {
     
 #warning("Ask this as a question in Slack group. This is not passing when I make it as a one liner. But same code passes when I first create sut as a variable.")
     func test_viewDidLoad_withOneAnswer_renderAnswer() {
-        let sut = makeSUT(answers: [makeDummyAnswer()])
+        let sut = makeSUT(answers: [makeAnswer()])
         _ = sut.view
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 1)
     }
@@ -56,11 +56,7 @@ class ResultViewControllerTest: XCTestCase {
         return sut
     }
     
-    func makeDummyAnswer() -> PresentableAnswer {
-        return makeAnswer(isCorrect: false)
-    }
-    
-    func makeAnswer(question: String = "", answer: String = "", wrongAnswer: String? = nil, isCorrect: Bool) -> PresentableAnswer {
+    func makeAnswer(question: String = "", answer: String = "", wrongAnswer: String? = nil, isCorrect: Bool = false) -> PresentableAnswer {
         return PresentableAnswer(question: question, answer: answer, wrongAnswer: wrongAnswer, isCorrect: isCorrect)
     }
 }
