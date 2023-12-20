@@ -30,7 +30,7 @@ class QuestionViewControllerTest: XCTestCase {
     func test_viewDidLoad_rendersOptionText() {
         let sut = makeSUT(options: ["A1", "A2"])
         let sut2 = makeSUT(options: ["A1", "A2"])
-
+        
         XCTAssertEqual(sut.tableView.title(at: 0), "A1")
         XCTAssertEqual(sut2.tableView.title(at: 1), "A2")
     }
@@ -53,22 +53,22 @@ class QuestionViewControllerTest: XCTestCase {
         
         sut.tableView.select(row: 0)
         XCTAssertEqual(callbackCount, 1)
-
+        
         sut.tableView.deselect(row: 0)
         XCTAssertEqual(callbackCount, 1)
     }
     
-  func test_optionSelected_withMultipleSelectionEnabled_notifiesDelegateSelection() {
-      var receivedAnswer = [String]()
-      let sut = makeSUT(options: ["A1", "A2"]) { receivedAnswer = $0 }
-      sut.tableView.allowsMultipleSelection = true
-      
-      sut.tableView.select(row: 0)
-      XCTAssertEqual(receivedAnswer, ["A1"])
-      
-      sut.tableView.select(row: 1)
-      XCTAssertEqual(receivedAnswer, ["A1", "A2"])
-  }
+    func test_optionSelected_withMultipleSelectionEnabled_notifiesDelegateSelection() {
+        var receivedAnswer = [String]()
+        let sut = makeSUT(options: ["A1", "A2"]) { receivedAnswer = $0 }
+        sut.tableView.allowsMultipleSelection = true
+        
+        sut.tableView.select(row: 0)
+        XCTAssertEqual(receivedAnswer, ["A1"])
+        
+        sut.tableView.select(row: 1)
+        XCTAssertEqual(receivedAnswer, ["A1", "A2"])
+    }
     
     func test_optionDeselected_withMultipleSelectionEnabled_notifiesDelegateSelection() {
         var receivedAnswer = [String]()
@@ -91,7 +91,7 @@ class QuestionViewControllerTest: XCTestCase {
         _ = sut.view
         return sut
     }
-
+    
 }
 
 private extension UITableView {
