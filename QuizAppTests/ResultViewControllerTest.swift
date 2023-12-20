@@ -17,4 +17,12 @@ class ResultViewControllerTest: XCTestCase {
         
         XCTAssertEqual(sut.headerLabel.text, "a Summary")
     }
+    
+    func test_viewDidLoad_withoutAnswers_doesNotRenderAnswers() {
+        let sut = ResultViewController(summary: "a Summary", answers: [])
+        
+        _ = sut.view
+        
+        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
+    }
 }
