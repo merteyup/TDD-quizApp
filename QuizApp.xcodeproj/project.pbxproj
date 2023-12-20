@@ -13,6 +13,8 @@
 		C4068D7E2B335E21000B5032 /* TableViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4068D7D2B335E21000B5032 /* TableViewHelpers.swift */; };
 		C4068D802B336B47000B5032 /* CorrectAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4068D7F2B336B47000B5032 /* CorrectAnswerCell.xib */; };
 		C4068D822B33779F000B5032 /* WrongAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4068D812B33779F000B5032 /* WrongAnswerCell.xib */; };
+		C4068D852B337FFE000B5032 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4068D842B337FFE000B5032 /* UITableViewExtension.swift */; };
+		C4068D872B33802C000B5032 /* PresentableAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4068D862B33802C000B5032 /* PresentableAnswer.swift */; };
 		C41E11622B317FBB0005F3E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41E11612B317FBB0005F3E2 /* AppDelegate.swift */; };
 		C41E11642B317FBB0005F3E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41E11632B317FBB0005F3E2 /* SceneDelegate.swift */; };
 		C41E116B2B317FBC0005F3E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C41E116A2B317FBC0005F3E2 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 		C4068D7D2B335E21000B5032 /* TableViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelpers.swift; sourceTree = "<group>"; };
 		C4068D7F2B336B47000B5032 /* CorrectAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectAnswerCell.xib; sourceTree = "<group>"; };
 		C4068D812B33779F000B5032 /* WrongAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WrongAnswerCell.xib; sourceTree = "<group>"; };
+		C4068D842B337FFE000B5032 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		C4068D862B33802C000B5032 /* PresentableAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableAnswer.swift; sourceTree = "<group>"; };
 		C41E115E2B317FBB0005F3E2 /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C41E11612B317FBB0005F3E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C41E11632B317FBB0005F3E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		C4068D832B337FF1000B5032 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C4068D842B337FFE000B5032 /* UITableViewExtension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C41E11552B317FBB0005F3E2 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +114,7 @@
 		C41E11602B317FBB0005F3E2 /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				C4068D832B337FF1000B5032 /* Helpers */,
 				C41E11612B317FBB0005F3E2 /* AppDelegate.swift */,
 				C41E11632B317FBB0005F3E2 /* SceneDelegate.swift */,
 				C41E116A2B317FBC0005F3E2 /* Assets.xcassets */,
@@ -113,6 +126,7 @@
 				C4068D7A2B31F781000B5032 /* ResultViewController.xib */,
 				C4068D7F2B336B47000B5032 /* CorrectAnswerCell.xib */,
 				C4068D812B33779F000B5032 /* WrongAnswerCell.xib */,
+				C4068D862B33802C000B5032 /* PresentableAnswer.swift */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -233,7 +247,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C41E11622B317FBB0005F3E2 /* AppDelegate.swift in Sources */,
+				C4068D852B337FFE000B5032 /* UITableViewExtension.swift in Sources */,
 				C41E11642B317FBB0005F3E2 /* SceneDelegate.swift in Sources */,
+				C4068D872B33802C000B5032 /* PresentableAnswer.swift in Sources */,
 				C41E11952B3182200005F3E2 /* QuestionViewController.swift in Sources */,
 				C4068D792B31F757000B5032 /* ResultViewController.swift in Sources */,
 			);
