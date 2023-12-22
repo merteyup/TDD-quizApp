@@ -11,7 +11,7 @@ import QuizEngine
 @testable import QuizApp
 
 class NavigationControllerRouterTests: XCTestCase {
-    let navigationController = UINavigationController()
+    let navigationController = NonAnimatedNavigationController()
     let factory = ViewControllerFactoryStub()
     lazy var sut: NavigationControllerRouter = { NavigationControllerRouter(self.navigationController,
                                                                             factory: self.factory) }()
@@ -36,6 +36,12 @@ class NavigationControllerRouterTests: XCTestCase {
         factory.answerCallback["Q1"]!("anything")
         
         XCTAssertTrue(callbackWasFired)
+    }
+    
+    class NonAnimatedNavigationController: UINavigationController {
+        override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+            super.pushViewController(viewController, animated: false)
+        }
     }
     
     class ViewControllerFactoryStub: ViewControllerFactory {
