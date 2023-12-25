@@ -26,7 +26,7 @@ class NavigationControllerRouter: Router {
         navigationController.pushViewController(viewController, animated: true)
     }
 
-    func routeTo(result: Result<Question, Answer>) {
+    func routeTo(result: Result<String, String>) {
         
     }
 
